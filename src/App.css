@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+html,
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  width: 100%; /* Ensures the page fits within the viewport */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  max-width: 100vw; /* Prevents content from exceeding viewport width */
+  overflow-x: hidden; /* Ensures no horizontal scroll */
+}
+
+.stars,
+.shooting-star {
+  position: fixed;
+  overflow-x: hidden;
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  box-shadow: 2vw 5vh 2px black, 10vw 8vh 2px black, 15vw 15vh 1px black,
+    22vw 22vh 1px black, 28vw 12vh 2px black, 32vw 32vh 1px black,
+    38vw 18vh 2px black, 42vw 35vh 1px black, 48vw 25vh 2px black,
+    53vw 42vh 1px black, 58vw 15vh 2px black, 63vw 38vh 1px black,
+    68vw 28vh 2px black, 73vw 45vh 1px black, 78vw 32vh 2px black,
+    83vw 48vh 1px black, 88vw 20vh 2px black, 93vw 52vh 1px black,
+    98vw 35vh 2px black, 5vw 60vh 1px black, 12vw 65vh 2px black,
+    18vw 72vh 1px black, 25vw 78vh 2px black, 30vw 85vh 1px black,
+    35vw 68vh 2px black, 40vw 82vh 1px black, 45vw 92vh 2px black,
+    50vw 75vh 1px black, 55vw 88vh 2px black, 60vw 95vh 1px black,
+    65vw 72vh 2px black, 70vw 85vh 1px black, 75vw 78vh 2px black,
+    80vw 92vh 1px black, 85vw 82vh 2px black, 90vw 88vh 1px black,
+    95vw 75vh 2px black;
+  animation: twinkle 8s infinite linear;
+}
+
+.shooting-star {
+  position: fixed;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, black, transparent);
+  animation: shoot 3s infinite ease-in;
+}
+
+.shooting-star:nth-child(1) {
+  top: 20%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  top: 35%;
+  left: -100px;
+  animation-delay: 1s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Additional twinkling stars with different animation timing */
+.stars::after {
+  content: "";
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  background: black;
+  box-shadow: 8vw 12vh 2px rgb(0, 0, 0), 16vw 18vh 1px rgb(0, 0, 0),
+    24vw 25vh 2px rgb(0, 0, 0), 33vw 15vh 1px rgb(0, 0, 0),
+    41vw 28vh 2px rgb(0, 0, 0), 49vw 35vh 1px rgb(0, 0, 0), 57vw 22vh 2px black,
+    65vw 42vh 1px black, 73vw 28vh 2px black, 81vw 48vh 1px black,
+    89vw 32vh 2px black, 97vw 45vh 1px black, 3vw 68vh 2px black,
+    11vw 75vh 1px black, 19vw 82vh 2px black, 27vw 88vh 1px black,
+    35vw 72vh 2px black, 43vw 85vh 1px black, 51vw 92vh 2px black,
+    59vw 78vh 1px black;
+  animation: twinkle 6s infinite linear reverse;
+}
+
+#anime {
+  background: none !important;
+  background-image: none !important;
+}
+
+.navbar,
+#form-card {
+  background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-color: black;
+  border-radius: 10px; /* Soft rounded corners */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  */
+}
+
+#innerCard:hover {
+  background-color: black;
   color: white;
+  transform: scale(1);
 }
 
-.App-link {
-  color: #61dafb;
+#innerCard {
+  transition: all 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* View button */
+.view-btn,
+.github-btn {
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.card:hover .view-btn,
+.card:hover .github-btn {
+  opacity: 1;
+}
+
+/* Nvabar */
+.navbar-nav .nav-link {
+  position: relative;
+  color: black; /* Adjust color as needed */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; /* Dark line color */
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  background-color: black;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
 }

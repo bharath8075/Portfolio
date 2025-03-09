@@ -1,0 +1,60 @@
+const skills = [
+  {
+    name: "HTML5",
+    icon: "html5",
+    width: "100%",
+    rating: "10/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS3",
+    icon: "css3",
+    width: "90%",
+    rating: "9/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "javascript",
+    width: "75%",
+    rating: "7/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "Bootstrap",
+    icon: "bootstrap",
+    width: "80%",
+    rating: "9/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "mysql",
+    width: "75%",
+    rating: "7.5/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "Java",
+    icon: "java",
+    width: "75%",
+    rating: "8/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "Spring Boot",
+    icon: "spring",
+    width: "75%",
+    rating: "7/10",
+    img: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/springboot.svg",
+  },
+  {
+    name: "React",
+    icon: "react",
+    width: "85%",
+    rating: "8/10",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  // { name: "Git", icon: "github", level: "avg", width: "70%" },
+];
+export default skills;
