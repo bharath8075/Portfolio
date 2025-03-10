@@ -1,5 +1,5 @@
 import animeMe from "../pictures/AnimatedME.png";
-import Resume from "../Resume/SelvaBharathResume.pdf";
+import Resume from "../Resume/Selva Bharath R-Resume.pdf";
 function Home() {
   return (
     <>
