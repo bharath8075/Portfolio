@@ -1,5 +1,6 @@
 import SkillCard from "../other components/SkillCard";
 import skills from "../InformationObjects/skill";
+import SoftSkillCard2 from "../other components/SoftSkillCard2";
 function Skill() {
   const softSkill1 = {
     skill: "Communication",
@@ -20,7 +21,7 @@ function Skill() {
 
   return (
     <section id="skill" className="section">
-      <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
+      <div className="container d-flex flex-column justify-content-center align-items-center py-5">
         <h1 className="text-center display-4">Skills & Technologies</h1>
 
         <div className="card border-0 align-items-center">
@@ -57,7 +58,7 @@ function Skill() {
           className="carousel-slide carousel-fade"
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner">
+          <div className="carousel-inner d-none d-sm-block">
             <div className="carousel-item active" data-bs-interval="1000">
               <SkillCard skill={softSkill1.skill} logo={softSkill1.logo} />
             </div>
@@ -95,6 +96,24 @@ function Skill() {
             ></span>
             <span className="visually-hidden">Next</span>
           </button>
+        </div>
+
+        {/* For smaller screen */}
+        <div className="row d- d-sm-none">
+          <div className="col-6">
+            <SoftSkillCard2 skill={softSkill1.skill} logo={softSkill1.logo} />
+          </div>
+          <div className="col-6">
+            <SoftSkillCard2 skill={softSkill2.skill} logo={softSkill2.logo} />
+          </div>
+        </div>
+        <div className="row d-sm-none">
+          <div className="col-6">
+            <SoftSkillCard2 skill={softSkill3.skill} logo={softSkill3.logo} />
+          </div>
+          <div className="col-6">
+            <SoftSkillCard2 skill={softSkill4.skill} logo={softSkill4.logo} />
+          </div>
         </div>
       </div>
     </section>

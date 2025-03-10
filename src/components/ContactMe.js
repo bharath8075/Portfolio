@@ -152,29 +152,29 @@ function ContactMe() {
       </section>
       {/* Footer */}
       <footer className="bg-dark text-white text-center  mt-auto py-3">
-        <p className="mb-0">
+        <p className="mb-0 font-monospace">
           © {dat.getFullYear()} Selva Bharath R. All Rights Reserved.
         </p>
-        <h4 className="mt-3">Built using</h4>
+        <h4 className="mt-3 lead">Built using</h4>
         <img
           src={
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
           }
-          style={{ maxWidth: "2rem" }}
+          style={{ maxWidth: "1.5rem" }}
         />
         &nbsp; &nbsp;
         <img
           src={
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
           }
-          style={{ maxWidth: "2rem" }}
+          style={{ maxWidth: "1.5rem" }}
         />{" "}
         &nbsp;
         <img
           src={
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
           }
-          style={{ maxWidth: "2rem", color: "white" }}
+          style={{ maxWidth: "1.5rem", color: "white" }}
         />
       </footer>
     </>

@@ -113,6 +113,7 @@ body {
 }
 
 .navbar,
+#skillCard,
 #form-card {
   background: rgba(255, 255, 255, 0.2); /* Light transparent white */
   backdrop-filter: blur(10px); /* Blur effect */
@@ -120,6 +121,12 @@ body {
   border-color: black;
   border-radius: 10px; /* Soft rounded corners */
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  */
+}
+
+#projectCard {
+  background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 #innerCard:hover {

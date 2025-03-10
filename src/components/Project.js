@@ -13,7 +13,11 @@ function Project() {
         <div className="row row-cols-1 row-cols-md-2 g-4  my-2">
           {/*First Card  */}
           <div className=" my-1">
-            <div className="card mx-auto" style={{ maxWidth: "250px" }}>
+            <div
+              id="projectCard"
+              className="card mx-auto"
+              style={{ maxWidth: "250px" }}
+            >
               <img
                 className="card-img-top"
                 src={RecipebookImage}
@@ -35,7 +39,11 @@ function Project() {
           </div>
           {/* Second Card */}
           <div className=" my-1">
-            <div className="card mx-auto" style={{ maxWidth: "250px" }}>
+            <div
+              id="projectCard"
+              className="card mx-auto"
+              style={{ maxWidth: "250px" }}
+            >
               <img
                 className="card-img-top"
                 src={MedicineImage}
@@ -59,7 +67,11 @@ function Project() {
         </div>
         <div className="row row-cols-1 row-cols-md-2 justify-content-center">
           <div className=" my-1">
-            <div className="card mx-auto" style={{ maxWidth: "250px" }}>
+            <div
+              id="projectCard"
+              className="card mx-auto"
+              style={{ maxWidth: "250px" }}
+            >
               <img
                 className="card-img-top"
                 src={UrlShortener}
@@ -77,7 +89,11 @@ function Project() {
             </div>
           </div>
           <div className=" my-1">
-            <div className="card mx-auto" style={{ maxWidth: "250px" }}>
+            <div
+              id="projectCard"
+              className="card mx-auto"
+              style={{ maxWidth: "250px" }}
+            >
               <img
                 className="card-img-top"
                 src={CurrencyConverter}
