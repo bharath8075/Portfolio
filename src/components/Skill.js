@@ -52,7 +52,11 @@ function Skill() {
         </div>
         <h3 className="display-5 text-center mt-5">Other Skills</h3>
         {/* Carousel */}
-        <div className="carousel-slide carousel-fade" data-bs-ride="carousel">
+        <div
+          id="skillCarousel"
+          className="carousel-slide carousel-fade"
+          data-bs-ride="carousel"
+        >
           <div className="carousel-inner">
             <div className="carousel-item active" data-bs-interval="1000">
               <SkillCard skill={softSkill1.skill} logo={softSkill1.logo} />
@@ -67,6 +71,30 @@ function Skill() {
               <SkillCard skill={softSkill4.skill} logo={softSkill4.logo} />
             </div>
           </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#skillCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#skillCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
